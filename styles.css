@@ -1,0 +1,59 @@
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #2b2a2a;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  transition: background-color 0.7s, color 0.7s;
+}
+
+.title {
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+}
+
+.title img{
+  width: 30px;
+  padding-left: 40px;
+}
+
+.title h1 {
+  color: #fff;
+  font-size: 25px;
+}
+
+
+.todolist {
+  display: flex;
+  max-width: 400px;
+  padding: 20px;
+  text-align: center;
+}
+
+#taskInput {
+  width: 70%;
+  padding: 8px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.add {
+  padding: 8px 16px;
+  font-size: 14px;
+  background-color: #f88;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #f88;
+}
