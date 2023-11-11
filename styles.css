@@ -1,23 +1,28 @@
-body{
+body {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
   background-color: #2b2a2a;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   transition: background-color 0.7s, color 0.7s;
+}
+
+.container {
+  background-color: #464646;
+  border-radius: 25px;
+  padding: 5px 10px;
 }
 
 .title {
   margin: 20px;
   display: flex;
   justify-content: space-between;
-  align-items:center;
+  align-items: center;
 }
 
-.title img{
+.title img {
   width: 30px;
   padding-left: 40px;
 }
@@ -27,12 +32,16 @@ body{
   font-size: 25px;
 }
 
-
 .todolist {
   display: flex;
+  flex-direction: column;
   max-width: 400px;
   padding: 20px;
   text-align: center;
+}
+
+.add {
+  margin-left: 15px;
 }
 
 #taskInput {
@@ -40,20 +49,99 @@ body{
   padding: 8px;
   margin-right: 10px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 7px;
   font-size: 14px;
 }
 
 .add {
   padding: 8px 16px;
   font-size: 14px;
+  background-color: aquamarine;
+  color: #464646;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.todolist__buttons {
+  display: flex;
+}
+
+button:hover {
   background-color: #f88;
   color: #fff;
+}
+
+button {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+#taskList {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+  padding-bottom: 5px;
+  color: #fff;
+  font-weight: normal;
+}
+
+li button {
+  padding: 8px 10px;
+  font-size: 14px;
+  background-color: aquamarine;
+  color: #464646;
   border: none;
   border-radius: 4px;
   cursor: pointer;
 }
 
-button:hover {
-  background-color: #f88;
+.toggle-button {
+  width: 60px;
+  height: 35px;
+  border-radius: 15px;
+  margin-left: 15px;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  background: linear-gradient(to right, #464646 50%, #fff 50%);
+}
+
+.toggle-button::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #fff;
+  top: 4.5px;
+  left: 2.5px;
+  transition: all 0.3s;
+}
+
+.dark-mode .toggle-button::before {
+  left: calc(100% - 27.5px);
+  background-color: #464646;
+}
+
+.dark-mode .toggle-button {
+  background: linear-gradient(to right, #464646 50%, #fff 50%);
+}
+
+body.dark-mode {
+  background-color: #ffffff;
+}
+
+body.dark-mode .title h1,
+body.dark-mode li {
+  color: #464646;
+}
+
+body.dark-mode .container {
+  background-color: #ccc;
 }

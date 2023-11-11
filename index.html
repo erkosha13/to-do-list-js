@@ -3,20 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>To-Do list</title>
+    <title>to-do list by UE</title>
     <link rel="stylesheet" type="text/css" href="./styles.css" />
   </head>
   <body>
     <div class="container">
       <div class="title">
         <h1>by Erkosha13</h1>
-        <img src="./img/github-mark-white.svg" alt="" />
+        <a href="https://github.com/erkosha13/to-do-list-js">
+          <img src="./img/github-mark-white.svg" alt="" />
+        </a>
+        <button class="toggle-button"></button>
       </div>
       <div class="todolist">
-        <input type="text" id="taskInput" placeholder="Add task" />
-        <button class="add" onclick="addTask()">Add</button>
+        <div class="todolist__buttons">
+          <input type="text" id="taskInput" placeholder="Add task" />
+          <button class="add" onclick="addTask()">Add</button>
+        </div>
         <ul id="taskList">
-          
+
         </ul>
       </div>
     </div>
